@@ -7,3 +7,4 @@ Purpose and goal of this product is to provide a simple way to manage a library 
 
 Refer user sequence diagram in project design document to get clear understanding about functionalities facilitated by the application.
 
+Thank You.
