@@ -5,5 +5,5 @@ A simple mobile based application which facilitates users with operations such a
 
 Purpose and goal of this product is to provide a simple way to manage a library in a college and decrease manual work by the employees in library as far as possible.The benefit of this product is enabling sharing of  books among students and ensuring that students has maximum scope to study books without any complex process to borrow books.
 
-To know more about all facilities implemented please refer 
+Refer user sequence diagram in project design document to get clear understanding about functionalities facilitated by the application.
 
