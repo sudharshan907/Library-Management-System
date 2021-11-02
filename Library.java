@@ -57,16 +57,11 @@ class util{
     public int countLeapYears(int d,int m,int y)
     {
         int years = y;
-
-        // Check if the current year needs to be considered
-        // for the count of leap years or not
         if (m<= 2)
         {
             years--;
         }
 
-        // An year is a leap year if it is a multiple of 4,
-        // multiple of 400 and not a multiple of 100.
         return years / 4 - years / 100 + years / 400;
     }
 
@@ -81,29 +76,24 @@ class util{
         mr=Integer.parseInt(ret.substring(3,5));
         yr=Integer.parseInt(ret.substring(6,10));
 
-        // COUNT TOTAL NUMBER OF DAYS BEFORE FIRST DATE 'dt1'
-
-        // initialize count using years and day
+     
         int n1 = ys * 365 + ds;
 
-        // Add days for months in given date
+
         for (int i = 0; i < ms - 1; i++)
         {
             n1 += monthDays[i];
         }
 
-        // Since every leap year is of 366 days,
-        // Add a day for every leap year
         n1 += countLeapYears(ds,ms,ys);
 
-        // SIMILARLY, COUNT TOTAL NUMBER OF DAYS BEFORE 'dt2'
         int n2 = yr * 365 + dr;
         for (int i = 0; i < mr - 1; i++)
         {
             n2 += monthDays[i];
         }
         n2 += countLeapYears(dr,mr,yr);
-        // return difference between two counts
+
         return (n2 - n1);
     }
 
