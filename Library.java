@@ -10,105 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 
-class util{
-    int MAX_VALID_YR = 9999;
-    int MIN_VALID_YR = 1800;
-    int monthDays[] = {31, 28, 31, 30, 31, 30,
-            31, 31, 30, 31, 30, 31};
-
-    public boolean isLeap(int year)
-    {
-        return (((year % 4 == 0) &&
-                (year % 100 != 0)) ||
-                (year % 400 == 0));
-    }
-
-    public boolean isValidDate(String s)
-    {
-        //(dd/mm/yyyy)
-        int d,m,y;
-        try{
-            d=Integer.parseInt(s.substring(0,2));
-            m=Integer.parseInt(s.substring(3,5));
-            y=Integer.parseInt(s.substring(6,10)); }
-        catch(Exception c){
-            return false;
-        }
-        if (y > MAX_VALID_YR ||
-                y < MIN_VALID_YR)
-            return false;
-        if (m < 1 || m > 12)
-            return false;
-        if (d < 1 || d > 31)
-            return false;
-        if (m == 2)
-        {
-            if (isLeap(y))
-                return (d <= 29);
-            else
-                return (d <= 28);
-        }
-        if (m == 4 || m == 6 ||
-                m == 9 || m == 11)
-            return (d <= 30);
-        return true;
-    }
-
-    public int countLeapYears(int d,int m,int y)
-    {
-        int years = y;
-        if (m<= 2)
-        {
-            years--;
-        }
-
-        return years / 4 - years / 100 + years / 400;
-    }
-
-    public int getDifference(String st,String ret)
-    {
-        int ds,ms,ys;
-        int dr,mr,yr;
-        ds=Integer.parseInt(st.substring(0,2));
-        ms=Integer.parseInt(st.substring(3,5));
-        ys=Integer.parseInt(st.substring(6,10));
-        dr=Integer.parseInt(ret.substring(0,2));
-        mr=Integer.parseInt(ret.substring(3,5));
-        yr=Integer.parseInt(ret.substring(6,10));
-
-     
-        int n1 = ys * 365 + ds;
-
-
-        for (int i = 0; i < ms - 1; i++)
-        {
-            n1 += monthDays[i];
-        }
-
-        n1 += countLeapYears(ds,ms,ys);
-
-        int n2 = yr * 365 + dr;
-        for (int i = 0; i < mr - 1; i++)
-        {
-            n2 += monthDays[i];
-        }
-        n2 += countLeapYears(dr,mr,yr);
-
-        return (n2 - n1);
-    }
-
-    public boolean isvalidphno(String s)
-    {
-        if(s.length()!=10)
-            return false;
-        boolean f=true;
-        for(int i=0;i<10;i++){
-            if(s.charAt(i)>'9' || s.charAt(i)<'0')
-                f=false;
-        }
-        return f;  }
-
-}
 
 public class Library {
     private static Connection con = null;
@@ -455,4 +356,104 @@ public class Library {
 
 }
 
+
+class util{
+    int MAX_VALID_YR = 9999;
+    int MIN_VALID_YR = 1800;
+    int monthDays[] = {31, 28, 31, 30, 31, 30,
+            31, 31, 30, 31, 30, 31};
+
+    public boolean isLeap(int year)
+    {
+        return (((year % 4 == 0) &&
+                (year % 100 != 0)) ||
+                (year % 400 == 0));
+    }
+
+    public boolean isValidDate(String s)
+    {
+        //(dd/mm/yyyy)
+        int d,m,y;
+        try{
+            d=Integer.parseInt(s.substring(0,2));
+            m=Integer.parseInt(s.substring(3,5));
+            y=Integer.parseInt(s.substring(6,10)); }
+        catch(Exception c){
+            return false;
+        }
+        if (y > MAX_VALID_YR ||
+                y < MIN_VALID_YR)
+            return false;
+        if (m < 1 || m > 12)
+            return false;
+        if (d < 1 || d > 31)
+            return false;
+        if (m == 2)
+        {
+            if (isLeap(y))
+                return (d <= 29);
+            else
+                return (d <= 28);
+        }
+        if (m == 4 || m == 6 ||
+                m == 9 || m == 11)
+            return (d <= 30);
+        return true;
+    }
+
+    public int countLeapYears(int d,int m,int y)
+    {
+        int years = y;
+        if (m<= 2)
+        {
+            years--;
+        }
+
+        return years / 4 - years / 100 + years / 400;
+    }
+
+    public int getDifference(String st,String ret)
+    {
+        int ds,ms,ys;
+        int dr,mr,yr;
+        ds=Integer.parseInt(st.substring(0,2));
+        ms=Integer.parseInt(st.substring(3,5));
+        ys=Integer.parseInt(st.substring(6,10));
+        dr=Integer.parseInt(ret.substring(0,2));
+        mr=Integer.parseInt(ret.substring(3,5));
+        yr=Integer.parseInt(ret.substring(6,10));
+
+     
+        int n1 = ys * 365 + ds;
+
+
+        for (int i = 0; i < ms - 1; i++)
+        {
+            n1 += monthDays[i];
+        }
+
+        n1 += countLeapYears(ds,ms,ys);
+
+        int n2 = yr * 365 + dr;
+        for (int i = 0; i < mr - 1; i++)
+        {
+            n2 += monthDays[i];
+        }
+        n2 += countLeapYears(dr,mr,yr);
+
+        return (n2 - n1);
+    }
+
+    public boolean isvalidphno(String s)
+    {
+        if(s.length()!=10)
+            return false;
+        boolean f=true;
+        for(int i=0;i<10;i++){
+            if(s.charAt(i)>'9' || s.charAt(i)<'0')
+                f=false;
+        }
+        return f;  }
+
+}
 
