@@ -1,0 +1,24 @@
+a) 3 extra works:-(apart from ass programs)
+1)taking input from a graphical interface instead of taking from terminal-java swing
+2)database connectivity:-to store data outside of program so that data is not lost even if program stops execution-jdbc(internally involves MySQL)
+3)full of exception handling
+
+b)Small extra Features implemented:-
+1)input validation for stdate,return date(checking whether entered dates are valid or not) during borrow operation,includes checking of stdate is before retdate or not and checks the contact number provided by borrower.
+2)has limit of 30days for any book to be borrowed (checks whether ret-stdate is within 30days or not)-if not cannot be borrowed
+3)imposes fine if returned date and expected return date is different based on no of days late( 1 rupee per day) 
+4)full of exception handling such that program will not crash for worst inputs also.
+5)added colours in terminal
+
+c)
+1)Comparing user input strings in SQL is not possible but numbers is possible so used bookid instead of book name.
+
+2)jdbc=java.sql package simply
+
+3)web application- it involves javascript,html,css definitely 
+
+4)Pure java code -importing jdbc package and importing "mysql-jdbc.jar" file to external libraries section in intellij & already defined database in laptop.
+
+5)for jdbc knowledge referred "learn programming yourself" youtube channel "jdbc playlist"->very helpful for my library project
+
+6)feature update thought but didnot implement bcz of time constraint :-allow only admins to add and remove a book in library (store all usernames and passwords in one table in database and whenever asked to add or remove option then ask username and password and check in table and allow if there in database
