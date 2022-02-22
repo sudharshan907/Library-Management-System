@@ -13,11 +13,12 @@ b)Small extra Features implemented:-
 c)
 1)Comparing user input strings in SQL is not possible but numbers is possible so used bookid instead of book name.
 
-2)jdbc=java.sql package simply
+2)jdbc=java.sql package simply.
 
-3)web application- it involves javascript,html,css definitely 
+3)web application- it involves javascript,html,css definitely(but this is mobile based application).
 
-4)Pure java code -importing jdbc package and importing "mysql-jdbc.jar" file to external libraries section in intellij & already defined database in laptop.
+4)Pure java code +importing jdbc package and importing "mysql-jdbc.jar" file to external libraries section in intellij & already defined database in laptop.
+(mysql-jdbc.jar file(4-5MB size only) is important to attach to external libraries of java program bcz java program didnot know how to/didnot have fucntionality of  execute queries on database,java.sql(=JDBC) will only contain fucntions to pass strings(queries) to DBMS attached.we have to attach DBMS(mysql for java file) seperately.
 
 5)for jdbc knowledge referred "learn programming yourself" youtube channel "jdbc playlist"->very helpful for my library project
 
