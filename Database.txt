@@ -1,1 +1,23 @@
+/* DDL codes of 2 tables that's it,dont know how to use this to automatically create tables in a database */
+
+CREATE TABLE `book` (
+  `name` varchar(30) NOT NULL,
+  `location` varchar(45) NOT NULL,
+  `status` varchar(30) NOT NULL DEFAULT 'Available',
+  `sid` int DEFAULT NULL,
+  `bid` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`bid`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+CREATE TABLE `student` (
+  `sid` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  `stdate` varchar(45) NOT NULL,
+  `returndate` varchar(45) NOT NULL,
+  `phno` varchar(45) NOT NULL,
+  PRIMARY KEY (`sid`)
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
 
