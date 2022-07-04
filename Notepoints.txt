@@ -1,25 +1,37 @@
-a) 3 extra works:-(apart from ass programs)
-1)taking input from a graphical interface instead of taking from terminal-java swing
-2)database connectivity:-to store data outside of program so that data is not lost even if program stops execution-jdbc(internally involves MySQL)
-3)full of exception handling
+Complete project context : (code file + design.txt + user sequence diagram(in design pdf) + readme file + below text + database.txt + usermanual.txt +use case diagram in SRS if want)
 
-b)Small extra Features implemented:-
-1)input validation for stdate,return date(checking whether entered dates are valid or not) during borrow operation,includes checking of stdate is before retdate or not and checks the contact number provided by borrower.
-2)has limit of 30days for any book to be borrowed (checks whether ret-stdate is within 30days or not)-if not cannot be borrowed
-3)imposes fine if returned date and expected return date is different based on no of days late( 1 rupee per day) 
+a)
+2 new things apart from normal assignment programs:
+1)database connectivity:-to store data outside program so that data is not lost even if program stops execution-jdbc(=java.sql package) contains only methods to pass queries to RDBMS(MySQL),executing queries will be dont by MySQL RDBMS
+2)Full of exception handling bcz users have high chance of entering invalid details,operations etc
+
+*include here problems/challenges you faced and how overcome them during project,learnt things after completing,learnt working practically with databases,to feel excited that i have built a application on my own with my knowledge etc and reason for doing choosing this project only,mostly will ask Q's on DBMS theory and popular SQL queries and database design i used for project in interview.
+
+
+b)Small extra Features implemented inside code:-(try to edit these 5 lines in a detailed manner,looks like open ended statements)
+1)input validation for return date entered(checking whether entered date is valid or not) by user during borrow operations,also checks whether entered date is past or not and checks the contact number provided by borrower(just format checking)
+2)has limit of 30days for any book to be borrowed(checks expected return date is within 30days or not while a user is borrowing)-if not cannot be borrowed
+3)imposes fine if returned date and expected return date is different based on no of days late( 1 rupee per day) during returning
 4)full of exception handling such that program will not crash for worst inputs also.
-5)added colours in terminal
+5)added colours in terminal,like red for unsuccessful and green for successful operations etc
 
-c)
-1)Comparing user input strings in SQL is not possible but numbers is possible so used bookid instead of book name.
+c)General Notepoints:
+1)Comparing user input strings in SQL is not possible but numbers is possible so used bookid instead of book name.(defined database according to this only)
 
 2)jdbc=java.sql package simply.
 
-3)web application- it involves javascript,html,css definitely(but this is mobile based application).
+3)get to know that web application building involves javascript,html,css definitely so chose mobile based application.
 
 4)Pure java code +importing jdbc package and importing "mysql-jdbc.jar" file to external libraries section in intellij & already defined database in laptop.
-(mysql-jdbc.jar file(4-5MB size only) is important to attach to external libraries of java program bcz java program didnot know how to/didnot have fucntionality of  execute queries on database,java.sql(=JDBC) will only contain fucntions to pass strings(queries) to DBMS attached.we have to attach DBMS(mysql for java file) seperately.
+(mysql-jdbc.jar file(4-5MB size only) is important to attach to external libraries of java program bcz java program didnot know how to/didnot have fucntionality of execute queries on database,java.sql(=JDBC) will only contain fucntions to pass strings(queries) to DBMS attached.we have to attach DBMS(mysql for java file) seperately.
 
 5)for jdbc knowledge referred "learn programming yourself" youtube channel "jdbc playlist"->very helpful for my library project
 
-6)feature update thought but didnot implement bcz of time constraint :-allow only admins to add and remove a book in library (store all usernames and passwords in one table in database and whenever asked to add or remove option then ask username and password and check in table and allow if there in database
+6)Features thought but didnot implement bcz of time constraint:-
+a)allow only admins to add and remove a book in library(store all usernames and passwords in one table in database and whenever asked to add or remove option then ask username and password and check in table and allow if there in database)
+b)Due to less proficiency in working with MySQL work bench,instead of putting sid as foreign key in book table and referring to sid value in student table(sid column is common in both book and student tables),inside code i acted like sid is foreign key in dealing with sid values(like checking explicitly sid values in other table exists or not etc-which can be avoided if i directly declare sid as foreign key and gave some option like set null,cascade etc)-this is not an extra feature,just a small mistake due to less proficiency in working with mysql qork bench)-no need to improve anything,just noting this down here
+c)taking input from a graphical interface instead of taking from terminal-java swing(no need of front end,no use of front end i believe).
+
+7)Remaining works left to do bcz of time constraint:-
+a)Getting screenshots of all operations including all facilities by running my program for all cases and merging them into one pdf(time consuming task)-so left it
+b)mention in design.txt which code snippets can be avoided if we declare a foreign key directly in definition of database.
