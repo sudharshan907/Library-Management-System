@@ -5,6 +5,6 @@ Developed a simple mobile based application which facilitates users with operati
 
 Purpose and goal of this product is to provide a simple way to manage a library in a college and decrease manual work by the employees in library as far as possible.The benefit of this product is enabling sharing of books among students and ensuring that students has maximum scope to study books without any complex process to borrow books.
 
-Refer usermanual.txt,design.txt,user sequence diagram(in design pdf),database.txt,Notepoints.txt to get crystal clear understanding about all functionalities facilitated by the application.
+Refer usermanual.txt,design.txt,user sequence diagram(in design pdf),database.txt,Notepoints.txt to get crystal clear understanding about all functionalities facilitated by this application.
 
 Thank You.
