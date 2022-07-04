@@ -1,0 +1,62 @@
+Design of entire library management system:(can refer user sequence diagram in design pdf):
+Basically a script of whole code file here for better revision(continous exception handling code snippets,database query code snippets inside code are not mentioned here)
+
+Library class{
+main(){     }
+insertrecord(){   }
+viewallbooks(){   }
+borrow(){     }
+returnbook(){   }
+removebook(){    }
+exit(){   }
+}
+
+util class{
+isleap(){   }
+isvaliddate(){   }
+countleapyears(){   }
+getdifference(){    }
+isvalidphno(){    }
+}
+
+main(){
+1)connect with database
+while(){
+print all 6 options
+just call one of 6 fns based on entered option
+}
+}
+
+insertrecord(){
+take name and location of new book and add to database
+}
+
+viewallbooks(){
+if no books,display no books
+else display whole book table(bid,name,location,status)
+}
+
+borrow(){
+take bookid from user
+search book with bookid,if not present display not present
+else check status of book
+if not available,from the "sid" value in book tuple,get the student details in student table
+display not available and expected date to return from tuple,ask to display student details?
+if yes,display name,borrowed date,contact number,expected date to return
+if available,take name,today date(from a inbuilt fn),expected returning date,contact number from student
+check returning date,if it is past,unsuccessful,if more than 30 days to returning date,unsuccessful
+else insert this new student tuple into student table,now take this new sid value
+in book table change status of this book to not available and store new sid value into that tuple sid column
+so to get borrowed student of this book,we can take that sid value and get from student table
+}
+
+return(){
+Take bookid,check status of it,if available,already returned
+else check his returned date from sid value of that book and if crossed impose fine based on no of days
+a)change book status to available,b)make sid value to null,c)delete tuple of that student
+}
+
+removebook(){
+take bookid,if it is available,delete that tuple in book table
+if not available(borrowed by some one),from sid value get student details and display student details and tell borrowed by him
+}

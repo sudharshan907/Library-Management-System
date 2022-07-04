@@ -1,0 +1,6 @@
+User manual for setting up working system using code:
+1)open Library.java file and in a new file named Library.java paste the entire code.
+2)set configuration(location of main method) in Edit configuration as <name>.Library,bcz main method is inside Library class,where name is package name in which this new file is present.
+3)Attach mysql-connector-for-java.jar file in external libraries section in intellij ide(project structure->modules->dependencies->+ button->jars or directories->choose path of file location and click ok).
+4)Make sure to have database already built inside the machine(i used mysql workbench to create database easily without querying from scratch,whole database is just two tables(student,book)-DDL of 2 tables in DataBase.txt file,i dongt know the exact queries to build whole database automatically but mentioned DDL of 2 tables in txt file)-No foreign key directly in database inbuilt structure(student id column is same in both tables) but inside code i acted like there is one foreign key(sid) by doing appropriate operations and dealing all cases,change url(database name,socket name),username and password inside code appropriately in starting lines.
+5)run it,will work(or gives appropriate exceptions and we can know our faults or go through code once).
