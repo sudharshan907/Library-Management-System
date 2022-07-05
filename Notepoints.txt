@@ -39,10 +39,10 @@ Complete project context : (code file + design.txt + user sequence diagram(in de
    e)for jdbc knowledge referred "learn programming yourself" youtube channel "jdbc playlist"->very helpful for my library project
 
 5)Features thought but didnot implement bcz of time constraint:-
-   a)allow only admins to add and remove a book in library(store all usernames and passwords in one table in database and whenever asked to add or remove       option then ask username and password and check in table and allow if there in database)
-   b)Due to less proficiency in working with MySQL work bench,instead of putting sid as foreign key in book table and referring to sid value in student         table(sid column is common in both book and student tables),inside code i acted like sid is foreign key in dealing with sid values(like checking explicitly sid values in other table exists or not etc-which can be avoided if i directly declare sid as foreign key and gave some option like set null,cascade etc)-this is not an extra feature,just a small mistake due to less proficiency in working with mysql qork bench)-no need to improve anything,just noting this down here
+   a)allow only admins to add and remove a book in library(store all usernames and passwords in one table in database and whenever asked to add or remove option then ask username and password and check in table and allow if there in database)
+   b)Due to less proficiency in working with MySQL work bench,instead of putting sid as foreign key in book table and referring to sid value in student table(sid column is common in both book and student tables),inside code i acted like sid is foreign key in dealing with sid values(like checking explicitly sid values in other table exists or not etc-which can be avoided if i directly declare sid as foreign key and gave some option like set null,cascade etc)-this is not an extra feature,just a small mistake due to less proficiency in working with mysql qork bench)-no need to improve anything,just noting this down here
    c)taking input from a graphical interface instead of taking from terminal-java swing(no need of front end,no use of front end i believe).
 
-7)Remaining works left to do bcz of time constraint:-
+6)Remaining works left to do bcz of time constraint:-
    a)Getting screenshots of all operations including all facilities by running my program for all cases and merging them into one pdf(time consuming task)-so left it
    b)mention in design.txt which code snippets can be avoided if we declare a foreign key directly in definition of database.
