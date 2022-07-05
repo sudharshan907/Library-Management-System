@@ -25,8 +25,8 @@ Complete project context : (code file + design.txt + user sequence diagram(in de
    b)Full of exception handling bcz users have high chance of entering invalid details,operations etc
 
 3)Small extra Features implemented inside code:-
-   1)input validation for return date entered(checking whether entered date is valid or not) by user during borrow operations,also checks whether entered       date is past or not and checks the contact number provided by borrower(just format checking)
-   2)has limit of 30days for any book to be borrowed(checks expected return date is within 30days or not while a user is borrowing)-if not cannot be       borrowed
+   1)input validation for return date entered(checking whether entered date is valid or not) by user during borrow operations,also checks whether entered date is past or not and checks the contact number provided by borrower(just format checking)
+   2)has limit of 30days for any book to be borrowed(checks expected return date is within 30days or not while a user is borrowing)-if not cannot be borrowed
    3)imposes fine if returned date and expected return date is different based on no of days late( 1 rupee per day) during returning
    4)full of exception handling such that program will not crash for worst inputs also.
    5)added colours in terminal,like red for unsuccessful and green for successful operations etc
@@ -40,9 +40,9 @@ Complete project context : (code file + design.txt + user sequence diagram(in de
 
 5)Features thought but didnot implement bcz of time constraint:-
    a)allow only admins to add and remove a book in library(store all usernames and passwords in one table in database and whenever asked to add or remove       option then ask username and password and check in table and allow if there in database)
-   b)Due to less proficiency in working with MySQL work bench,instead of putting sid as foreign key in book table and referring to sid value in student         table(sid column is common in both book and student tables),inside code i acted like sid is foreign key in dealing with sid values(like checking          explicitly sid values in other table exists or not etc-which can be avoided if i directly declare sid as foreign key and gave some option like set          null,cascade etc)-this is not an extra feature,just a small mistake due to less proficiency in working with mysql qork bench)-no need to improve          anything,just noting this down here
+   b)Due to less proficiency in working with MySQL work bench,instead of putting sid as foreign key in book table and referring to sid value in student         table(sid column is common in both book and student tables),inside code i acted like sid is foreign key in dealing with sid values(like checking explicitly sid values in other table exists or not etc-which can be avoided if i directly declare sid as foreign key and gave some option like set null,cascade etc)-this is not an extra feature,just a small mistake due to less proficiency in working with mysql qork bench)-no need to improve anything,just noting this down here
    c)taking input from a graphical interface instead of taking from terminal-java swing(no need of front end,no use of front end i believe).
 
 7)Remaining works left to do bcz of time constraint:-
-   a)Getting screenshots of all operations including all facilities by running my program for all cases and merging them into one pdf(time consuming task)-     so left it
+   a)Getting screenshots of all operations including all facilities by running my program for all cases and merging them into one pdf(time consuming task)-so left it
    b)mention in design.txt which code snippets can be avoided if we declare a foreign key directly in definition of database.
