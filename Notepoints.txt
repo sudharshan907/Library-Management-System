@@ -1,6 +1,6 @@
 Complete project context : (code file + design.txt + user sequence diagram(in design pdf) + readme file + below text + database.txt + usermanual.txt +use case diagram in SRS if want)
 
-2 new things in the project apart from normal assignment programs:
+    2 new things in the project apart from normal assignment programs:
    a)database connectivity:-to store data outside program so that data is not lost even if program stops execution-jdbc(=java.sql package) contains only methods to pass queries to RDBMS(MySQL),executing queries will be dont by MySQL RDBMS
    b)Full of exception handling bcz users have high chance of entering invalid details,operations etc
    
@@ -14,7 +14,6 @@ Complete project context : (code file + design.txt + user sequence diagram(in de
    4)Thinking about edge cases like handling invalid inputs and invalid requests at each stage of process,even showed to my friends and get some review and  noted down suggested updations from them and got some more edge cases and handled them too.
 
   B)Learnt points after completion of project:
-
    1)Came to know that whatever CS fundamentals i studied so become useless if we didnot use that knowledge to solve real world problems 
    2)Got some experience of practical working with databases on own
    3)realised only practical hands on work will convert a student to skillful software developer and pure theoritical knowledge will not help
