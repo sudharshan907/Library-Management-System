@@ -20,11 +20,11 @@ Complete project context : (code file + design.txt + user sequence diagram(in de
    4)Modified my learning approach towards anything,trying to think abt what all applications in real life of everything i have learnt like that
    
 2)Small extra Features implemented inside code:-
-   1)input validation for return date entered(checking whether entered date is valid or not) by user during borrow operations,also checks whether entered date is past or not and checks the contact number provided by borrower(just format checking)
-   2)has limit of 30days for any book to be borrowed(checks expected return date is within 30days or not while a user is borrowing)-if not cannot be borrowed
-   3)imposes fine if returned date and expected return date is different based on no of days late( 1 rupee per day) during returning
-   4)full of exception handling such that program will not crash for worst inputs also.
-   5)added colours in terminal,like red for unsuccessful and green for successful operations etc
+   a)input validation for return date entered(checking whether entered date is valid or not) by user during borrow operations,also checks whether entered date is past or not and checks the contact number provided by borrower(just format checking)
+   b)has limit of 30days for any book to be borrowed(checks expected return date is within 30days or not while a user is borrowing)-if not cannot be borrowed
+   c)imposes fine if returned date and expected return date is different based on no of days late( 1 rupee per day) during returning
+   d)full of exception handling such that program will not crash for worst inputs also.
+   e)added colours in terminal,like red for unsuccessful and green for successful operations etc
 
 3)General Notepoints:
    a)Comparing user input strings in SQL is not possible but numbers is possible so used bookid instead of book name.(defined database according to this only)
