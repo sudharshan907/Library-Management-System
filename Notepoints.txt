@@ -6,9 +6,9 @@ Complete project context : (code file + design.txt + user sequence diagram(in de
    *These are not problems at all,i feel these as challenges everytime I stuck while doing project
 
    1)wrote SQL queries easily bcz taught in DBMS course but problem with choosing and using methods of java.sql(jdbc) package according to queries we want and database connection code snippet,so referred some youtube channel for this information 
-   2)Never created a database on my own,chose MySQL work bench,struggled a bit to get used to workbench like creating required database and understanding        interface of MySQL work bench
+   2)Never created a database on my own,chose MySQL work bench,struggled a bit to get used to workbench like creating required database and understanding interface of MySQL work bench
    3)tried designing beautiful user interface for all stages in system but skipped it after realising that my purpose is not to design front end and aim is to create a efficient back end,so just uses terminal to take all inputs.
-   4)Thinking about edge cases like handling invalid inputs and invalid requests at each stage of process,even showed to my friends and get some review and     noted down suggested updations from them and got some more edge cases and handled them too.
+   4)Thinking about edge cases like handling invalid inputs and invalid requests at each stage of process,even showed to my friends and get some review and  noted down suggested updations from them and got some more edge cases and handled them too.
 
   B)Learnt points after completion of project:
 
@@ -21,7 +21,7 @@ Complete project context : (code file + design.txt + user sequence diagram(in de
 
 2)
    2 new things apart from normal assignment programs:
-   a)database connectivity:-to store data outside program so that data is not lost even if program stops execution-jdbc(=java.sql package) contains only       methods to pass queries to RDBMS(MySQL),executing queries will be dont by MySQL RDBMS
+   a)database connectivity:-to store data outside program so that data is not lost even if program stops execution-jdbc(=java.sql package) contains only methods to pass queries to RDBMS(MySQL),executing queries will be dont by MySQL RDBMS
    b)Full of exception handling bcz users have high chance of entering invalid details,operations etc
 
 3)Small extra Features implemented inside code:-
