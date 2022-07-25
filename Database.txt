@@ -19,13 +19,17 @@ CREATE TABLE `student` (
   PRIMARY KEY (`sid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
-Abstract of database design:
-Book(bid,bname,location,status,sid)-bid is primary key,this sid is referring to sid att in student table(FD:bid->bname,location,status,sid)
-student(sid,sname,stdate,retdate,phno)-sid is primary key(FD:sid->sname,stdate,retdate,phno)
+1)Abstract of database design used above:
+Book(bid,bname,location,status,sid)-bid is primary key,this sid is referring to sid att in student table(FD:bid->bname,location,status,sid).
+student(sid,sname,stdate,retdate,phno)-sid is primary key(FD:sid->sname,stdate,retdate,phno)-this Sid is referred by Sid in book table
 
-Process:Initial table is single table of Book(bid,bname,location,status,sname,stdate,retdate,phno) without sid attribute(book and student details)
-later thought to include sid new attribute and made FD of sid->sname,stdate,retdate,phno possible to apply
-and this is transitive dependency of non key determining non keys violating 3nf so decomposed to two tables appropriately
+2)Process i did during creation of database(with almost no knowledge on database design,did it with no plan just worked out something):
+Initial table is single table of Book(bid,bname,location,status,sname,stdate,retdate,phno) without sid attribute(simply book with book and student details)
+later thought to include sid new attribute and made FD of sid->sname,stdate,retdate,phno possible to apply(which is not necessary,i realised later)
+and this is transitive dependency of non key determining non keys violating 3nf so decomposed to two tables appropriately and put Sid as foreign key
 
-Tried hard to get some more FDs from requirement analysis,failed to get some more FDs(may be no more FDs or some still possible)
-we can say my database is in bcnf since there are only 2 FDs and they are valid in BCNF.
+3)Crct process to do(later realised after completing everything during revision for interviews):
+in initial complete table,only FD applicable from Requirement analysis is bid->all remaiming atts.so database(table) is already in bcnf but i should identify that sname,state,retdate,phno-these 4 atts will have nulls in most of the tuples.so better to seperate out these 4 atts with bid using half FD which is bid->sname,stdate,retdate,phno.
+So two new tables will be Book(bid,bname,location,status)-(bid is PK) and student(bid,sname,stdate,retdate,phno) -bid is PK.bid in student table should refer to bid in book table.This decomposition is lossless and preserving all FDs and in bcnf too(LHS of both half FDs are super keys).so no need of any Sid attribute here,i mistakened it during creation of database design.
+
+4)Tried hard to identify some more FDs from requirement analysis to normalise further,failed to get some more FDs(may be no more FDs or some still possible)
