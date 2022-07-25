@@ -29,8 +29,3 @@ and this is transitive dependency of non key determining non keys violating 3nf 
 
 Tried hard to get some more FDs from requirement analysis,failed to get some more FDs(may be no more FDs or some still possible)
 we can say my database is in bcnf since there are only 2 FDs and they are valid in BCNF.
-
-
-
-
-
