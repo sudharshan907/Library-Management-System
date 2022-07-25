@@ -1,4 +1,4 @@
-Complete project context : (code file + design.txt + user sequence diagram(in design pdf) + readme file + below text + database.txt + usermanual.txt +use case diagram in SRS if want)
+Complete project context : (code file + design.txt + user sequence diagram(in design pdf) + readme file + below text + database.txt(indicating database design and normalization procedure) + usermanual.txt +use case diagram in SRS if want)
 
    2 new things in the project apart from normal assignment programs:
    a)database connectivity:-to store data outside program so that data is not lost even if program stops execution-jdbc(=java.sql package) contains only methods to pass queries to RDBMS(MySQL),executing queries will be dont by MySQL RDBMS
