@@ -30,6 +30,8 @@ and this is transitive dependency of non key determining non keys violating 3nf 
 
 3)Crct process to do(later realised after completing everything during revision for interviews):
 in initial complete table,only FD applicable from Requirement analysis is bid->all remaiming atts.so database(table) is already in bcnf but i should identify that sname,state,retdate,phno-these 4 atts will have nulls in most of the tuples.so better to seperate out these 4 atts with bid using half FD which is bid->sname,stdate,retdate,phno.
-So two new tables will be Book(bid,bname,location,status)-(bid is PK) and student(bid,sname,stdate,retdate,phno) -bid is PK.bid in student table should refer to bid in book table.This decomposition is lossless and preserving all FDs and in bcnf too(LHS of both half FDs are super keys).so no need of any Sid attribute here,i mistakened it during creation of database design.
+So two new tables will be Book(bid,bname,location,status)-(bid is PK) and student(bid(foreign key),sname,stdate,retdate,phno) -bid is PK.bid(FK) in student table should refer to bid in book table.This decomposition is lossless and preserving all FDs and in bcnf too(LHS of both half FDs are super keys).so no need of any Sid attribute here,i mistakened it during creation of database design.
+a)ON DELETE of bid value in book table(before deleting it we are checking whether status is available or not and deleting only if status is available i.e., no value of this bid in student table,so no handling of on DELETE functionaality is required here)(set null,set default or delete cascade are not required)
+b)ON UPDATE of bid value in book table(we are not updating bid value anymore bcz it is auto increment,so no case of what to do ON UPDATE on referred key(bid in bok table)
 
 4)Tried hard to identify some more FDs from requirement analysis to normalise further,failed to get some more FDs(may be no more FDs or some still possible)
