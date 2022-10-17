@@ -1,4 +1,5 @@
-Complete project context : (code file + design.txt + user sequence diagram(in design pdf) + readme file + below text + database.txt(indicating database design and normalization procedure) + usermanual.txt +use case diagram in SRS if want)
+Complete project context : 
+(code file + design.txt + user sequence diagram(in design pdf) + readme file + below text + database.txt(indicating database design and normalization procedure) + usermanual.txt +use case diagram in SRS if want)
 
 Quick Revision before interviews:
 1.use case diagram(in SRS pdf) 2.user sequence diagram(in design pdf) 3.database.txt(only matter,not sql code) 4.below notepoints
