@@ -7,4 +7,6 @@ Purpose and goal of this product is to provide a simple way to manage a library 
 
 Refer usermanual.txt,design.txt,user sequence diagram(in design pdf),database.txt,Notepoints.txt to get crystal clear understanding about all functionalities facilitated by this application.
 
+For Revision refer Notepoints.txt only
+
 Thank You.
