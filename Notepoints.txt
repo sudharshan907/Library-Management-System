@@ -4,29 +4,26 @@ Quick Revision before interviews:
 1.use case diagram(in SRS pdf) 2.user sequence diagram(in design pdf) 3.database.txt(only matter,not sql code) 4.below notepoints
 
 
-   2 new things in the project apart from normal assignment programs:
+2 new things in the project apart from normal assignment programs:
    a)database connectivity:-to store data outside program so that data is not lost even if program stops execution-jdbc(=java.sql package) contains only methods to pass queries to RDBMS(MySQL),executing queries will be dont by MySQL RDBMS
    b)Full of exception handling bcz users have high chance of entering invalid details,operations etc
    
 0)JDBC Details
 3 types of statements(statement,preparedStatement,callable statement) in JDBC
-sql statements involving variables like bid,sid and wildcards(?) or any parameterized thing-prefer preparedstatement only
+a)statement: static sql statements
+b)preparedstatement: recompiled sql statements that can be executed many times by changing parameters
+sql statements involving variables like bid,sid and wildcards(?) or any parameterized thing-prefer preparedstatement only(only used this is whole project)
+c)callable statement: stored procedures(group of sql statements)
+
 Connection con=DriverManager.getConnection(url,user,pass);
 String sql=" ";
 preparedstatement ps=con.preparestatement(sql);
-
-below setstring() if involving wildcards,filling all of them
-ps.setstring(1,str);
-.
-.
-
+below setstring() calls if involving wildcards,filling all of them
+ps.setstring(1,str);  .... and so on filling all wildcards
 Then
-int rows=ps.executeupdate(); or
-ResultSet res=ps.executequery(sql);
-
+int rows=ps.executeupdate(); or ResultSet res=ps.executequery(sql);
 from res,res.getstring("att name") or res.getint("att name") and
 res.next() methods for getting data from database
-
    
 1)Problems faced and how i overcame them:
    *Reason for choosing this project is to get hands on practical experience on working with databases and to gain my confidence.
